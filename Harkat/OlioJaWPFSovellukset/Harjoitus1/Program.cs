@@ -19,7 +19,7 @@ namespace Harjoitus1
             string autontiedot = auto.ToString();
             Console.WriteLine(autontiedot);
 
-            //Tyhjä rivi konsoliibn
+            //Tyhjä rivi konsoliin
             Console.WriteLine();
 
             //Luodaan toinen olio luokasta Ajoneuvo
