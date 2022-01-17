@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing.Imaging;
+using System.Drawing;
+using Microsoft.Win32;
+using Microsoft.Azure.Amqp.Framing;
 
 namespace Harjoitus3
 {
@@ -44,7 +48,6 @@ namespace Harjoitus3
             Console.WriteLine();
         }
 
-        //Metodi joka ottaa parametriksi integer - arvon
         public void LisääLämpöä(int i)
         {
             Lämpötila = Lämpötila + i;

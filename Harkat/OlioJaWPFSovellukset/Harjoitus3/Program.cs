@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Drawing.Imaging;
+using System.Drawing;
+using Microsoft.Win32;
 
 namespace Harjoitus3
 {
@@ -6,7 +11,7 @@ namespace Harjoitus3
     {
         static void Main(string[] args)
         {
-            {      
+            {
                 Boolean lopeta = false;
                 Console.WriteLine("Tervetuloa käyttämään Harvia 3000, Burn your nuts off kiuasta");
                 while (lopeta != true)

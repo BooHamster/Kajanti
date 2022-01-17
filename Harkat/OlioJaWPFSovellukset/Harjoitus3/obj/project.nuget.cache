@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tePvfF4G03KSxeGp7sreOUrW1H+bLxmRtYmzGx3aSmjuNcwvOJoeIoNPw7FV6yc/jwXiYTw4lX2QUIWMwwrfiw==",
+  "dgSpecHash": "CI81XFTfM4bUY9JgBPSxLW1Vfw7tvPjJPZzHzdVQnrjYgz/EEVa4ZdgBHU8tj9KYm/aeyb9I5/Y6dyxbRaHGVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rober\\source\\repos\\Kajanti\\Harkat\\OlioJaWPFSovellukset\\Harjoitus3\\Harjoitus3.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.azure.amqp\\2.5.10\\microsoft.azure.amqp.2.5.10.nupkg.sha512"
+  ],
   "logs": []
 }
