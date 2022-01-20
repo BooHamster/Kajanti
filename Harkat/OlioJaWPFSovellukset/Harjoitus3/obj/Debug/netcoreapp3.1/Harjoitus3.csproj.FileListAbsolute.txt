@@ -12,3 +12,5 @@ C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\obj\D
 C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\obj\Debug\netcoreapp3.1\Harjoitus3.dll
 C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\obj\Debug\netcoreapp3.1\Harjoitus3.pdb
 C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\obj\Debug\netcoreapp3.1\Harjoitus3.genruntimeconfig.cache
+C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\rober\source\repos\Kajanti\Harkat\OlioJaWPFSovellukset\Harjoitus3\obj\Debug\netcoreapp3.1\Harjoitus3.csproj.CopyComplete

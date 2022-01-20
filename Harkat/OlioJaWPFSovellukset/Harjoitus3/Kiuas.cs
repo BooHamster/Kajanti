@@ -48,6 +48,7 @@ namespace Harjoitus3
             Console.WriteLine();
         }
 
+
         public void LisääLämpöä(int i)
         {
             Lämpötila = Lämpötila + i;

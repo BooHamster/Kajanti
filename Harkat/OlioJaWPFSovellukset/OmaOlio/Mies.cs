@@ -19,8 +19,10 @@ namespace OmaOlio
 
         public void NäytäInfo()
         {
-            if()
-            Nimi = Console.ReadLine();
+            if(NimiAnnettu !=true)
+            {
+                Nimi = Console.ReadLine();
+            }
             Console.WriteLine("Elämä Pointsit: " + Elämä + " Tila: Olet vielä elossa!" + " Urpon nimi: " + Nimi);
         }
 

@@ -15,7 +15,7 @@ namespace Harjoitus4
             Kesto = _kesto;
         }
 
-        public void TulostaData()
+        public void TulostaKappale()
         {
             Console.WriteLine("-- Nimi:  " + Nimi);
             Console.WriteLine("-- Kesto:  " + Kesto);
