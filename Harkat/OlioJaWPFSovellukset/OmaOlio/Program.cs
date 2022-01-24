@@ -38,13 +38,13 @@ namespace OmaOlio
                     bool tappelu = false;
 
                     Console.WriteLine();
-                    Mies Mies1 = new Mies(false, 100); ;
+                    Mies Mies1 = new Mies(false, 100, 0);
                     Console.Write("Anna nimesi, mut älä jos se on Yrjö!: ");
+                    Mies1.NäytäInfo();
                     while (jatka == true && Mies1.Kuollut != true)
                     {
                         try
                         {
-                            Mies1.NäytäInfo();
                             if (number(1, 10) == 1 && hieronta != false)
                             {
                                 Console.WriteLine("Kohtaat vaimosi, hän haluaa hieronnan, annatko rakkaalle vaimollesi hieronnan? k/e? ");
@@ -56,7 +56,7 @@ namespace OmaOlio
                                     Mies1.OtaLämää(10);                                   
                                 }
 
-                                else if (asetus.Equals("k"))
+                            else if (asetus.Equals("k"))
                                 {
                                     Console.WriteLine("Annat vaimollesi ronskin hieronnan, hän hymisee tyytyväisenä uneen");
                                 }
@@ -190,6 +190,11 @@ namespace OmaOlio
                                 {
                                     Console.WriteLine("Annat vaimollesi ronskin hieronnan, hän hymisee tyytyväisenä uneen ");
                                 }
+                            }
+
+                            else
+                            {
+                                Mies1.NäytäInfo();
                             }
 
 

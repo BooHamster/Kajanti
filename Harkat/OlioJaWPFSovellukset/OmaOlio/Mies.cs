@@ -10,11 +10,13 @@ namespace OmaOlio
         public string Nimi;
         public bool Kuollut;
         public bool NimiAnnettu = false;
+        public int Hulluus = 0;
 
-        public Mies(bool _elos, int _elämä)
-        {
+        public Mies(bool _elos, int _elämä, int _hulluus)
+        { 
             Kuollut = _elos;
             Elämä = _elämä;
+            Hulluus = _hulluus; 
         }
 
         public void NäytäInfo()
@@ -22,8 +24,9 @@ namespace OmaOlio
             if(NimiAnnettu !=true)
             {
                 Nimi = Console.ReadLine();
+                NimiAnnettu = true;
             }
-            Console.WriteLine("Elämä Pointsit: " + Elämä + " Tila: Olet vielä elossa!" + " Urpon nimi: " + Nimi);
+            Console.WriteLine("Elämä Pointsit: " + Elämä + " Tila: Olet vielä elossa!" + "Hulluus Aste: " + Hulluus+ "%"  + " Urpon nimi: " + Nimi);
         }
 
         public void OtaLämää(int i)

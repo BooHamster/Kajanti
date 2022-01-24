@@ -17,17 +17,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus5", "Harjoitus5\Ha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus6", "Harjoitus6\Harjoitus6.csproj", "{BAA083E5-C8CB-4DE9-820A-0E4AE5B7D127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticTest", "StaticTest\StaticTest.csproj", "{4784E548-6BCF-4F0F-BA07-04AD4C54CAFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticTest", "StaticTest\StaticTest.csproj", "{4784E548-6BCF-4F0F-BA07-04AD4C54CAFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HenkilöStatic", "HenkilöStatic\HenkilöStatic.csproj", "{500E7735-933C-4984-BF1B-D4780DB0312C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HenkilöStatic", "HenkilöStatic\HenkilöStatic.csproj", "{500E7735-933C-4984-BF1B-D4780DB0312C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus5LaskinOpettajanMalli", "Harjoitus5LaskinOpettajanMalli\Harjoitus5LaskinOpettajanMalli.csproj", "{089872C3-373F-4AD8-AFF2-85D51655331E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus5LaskinOpettajanMalli", "Harjoitus5LaskinOpettajanMalli\Harjoitus5LaskinOpettajanMalli.csproj", "{089872C3-373F-4AD8-AFF2-85D51655331E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerintäTesti", "PerintäTesti\PerintäTesti.csproj", "{E2D48B63-C073-419B-88BB-DBA8C19AD2B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerintäTesti", "PerintäTesti\PerintäTesti.csproj", "{E2D48B63-C073-419B-88BB-DBA8C19AD2B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractiTesti", "AbstractiTesti\AbstractiTesti.csproj", "{AAA03CAE-4A5C-47EE-A160-42088425B4EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractiTesti", "AbstractiTesti\AbstractiTesti.csproj", "{AAA03CAE-4A5C-47EE-A160-42088425B4EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus7", "Harjoitus7\Harjoitus7.csproj", "{0CFB3233-CABD-44BE-8FBA-CB132FFFF126}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus7", "Harjoitus7\Harjoitus7.csproj", "{0CFB3233-CABD-44BE-8FBA-CB132FFFF126}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitus9", "Harjoitus9\Harjoitus9.csproj", "{05143F5C-A072-4B9F-87AF-6448068734A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VahvistinTesti", "VahvistinTesti\VahvistinTesti.csproj", "{BF086815-B631-41C7-AA17-3B5F0E05C589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus8", "Harjoitus8\Harjoitus8.csproj", "{0E3B6FB0-0A34-4095-B3A4-1780183DB8F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +93,18 @@ Global
 		{0CFB3233-CABD-44BE-8FBA-CB132FFFF126}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CFB3233-CABD-44BE-8FBA-CB132FFFF126}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CFB3233-CABD-44BE-8FBA-CB132FFFF126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05143F5C-A072-4B9F-87AF-6448068734A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05143F5C-A072-4B9F-87AF-6448068734A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05143F5C-A072-4B9F-87AF-6448068734A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05143F5C-A072-4B9F-87AF-6448068734A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF086815-B631-41C7-AA17-3B5F0E05C589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF086815-B631-41C7-AA17-3B5F0E05C589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF086815-B631-41C7-AA17-3B5F0E05C589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF086815-B631-41C7-AA17-3B5F0E05C589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E3B6FB0-0A34-4095-B3A4-1780183DB8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E3B6FB0-0A34-4095-B3A4-1780183DB8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E3B6FB0-0A34-4095-B3A4-1780183DB8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E3B6FB0-0A34-4095-B3A4-1780183DB8F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
