@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Windows.Input;
 using Xamarin.Forms;
-
+//Robert Kajanti
 namespace Harjoitus7
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Boolean jatka = true;
             Hissi Hissi1 = new Hissi(); //Luodaan uusi Hissi olio
 
             while (true) //while looppi jatkuu kunnes sen ehto ei täyty enää

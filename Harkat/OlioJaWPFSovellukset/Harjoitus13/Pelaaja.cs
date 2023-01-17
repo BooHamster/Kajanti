@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Harjoitus13
 {
-    class Pelaaja
+    class Pelaaja //Pelaaja luokka
     {
+        //Pelaaja olion muuttujat
         private string Etunimi { get; set; }
         private string Sukunimi { get; set; }
         private int PelaajaNumero { get; set; }
@@ -17,9 +18,9 @@ namespace Harjoitus13
             PelaajaNumero = _numero;
         }
 
-        public string HaeData() //Opiskelijan tietojen tulostamiseen tarkoitettu Metodi
+        public string HaeData()  //pelaaja olion tietojen tulostamisen metodi konsoliin
         {
-            return Etunimi + " " + Sukunimi + "." + " Pelaaja Numero: " + PelaajaNumero + "."; //Palauttaa nämä tiedot, tämän voisi kyllä toteuttaa myös Console.Write komennolla myös
+            return Etunimi + " " + Sukunimi + "." + " Pelaaja Numero: " + PelaajaNumero + "."; 
         }
 
     }

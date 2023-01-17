@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Harjoitus9
 {
-    class Radio
+    class Radio //Radio olio
     {
         public Radio(string _nimi, bool _on, int _ääni, decimal _taajuus) //Määritellään konstruktori Radio oliolle
         {
@@ -16,12 +16,12 @@ namespace Harjoitus9
 
         public string Nimi;
         bool Päällä;
-        private readonly int ÄänenVoimaMax = 9;
-        private readonly int ÄänenVoimaMin = 0;
+        private readonly int ÄänenVoimaMax = 9; //Maksimi äänenvoimakkuus muuttuja privaattina, jota käytetään vain luokan sisällä itse Äänenvoimakkuus muuttujan kontrolloimiseen
+        private readonly int ÄänenVoimaMin = 0; //Minimi äänenvoimakkuus muuttuja privaattina, jota käytetään vain luokan sisällä itse Äänenvoimakkuus muuttujan kontrolloimiseen
         private readonly decimal MaxTaajuus = 107.9M; //käytetään desimaali muuttujia näissä missä tarvitaan, koska double on ihan paska ja tyhmä muuttuja
         private readonly decimal MinTaajuus = 88.0M;
-        private decimal taajuus { get; set; }
-        private int äänenvoimakkuus { get; set; }
+        private decimal taajuus;
+        private int äänenvoimakkuus;
         public decimal Taajuus        //Määritetään public Taajuus muuttujalle get set sisällöt, josta pääohjelma voi hakea private taajuus muuttujan arvon
         {
             get { return taajuus; }  //Pääohjelma saa tätä käyttämällä private taajuus arvon, ja voi myös asettaa sen
@@ -47,19 +47,16 @@ namespace Harjoitus9
                 if (value > ÄänenVoimaMax)
                 {
                     value = ÄänenVoimaMax;
+                    Console.WriteLine("Radio on jo maksimi äänenvoimakkuudella!");
                 }
                 else
                 if (value < ÄänenVoimaMin)
                 {
                     value = ÄänenVoimaMin;
+                    Console.WriteLine("Radio on jo minimi äänenvoimakkuudella!");
                 }
                 äänenvoimakkuus = value;
             }
-        }
-        public void AsetaKerros()
-        {
-            Taajuus = Convert.ToInt32(Console.ReadLine()); //Tämä vaihtaa annetun arvon Console.Readline() komennosta Int muotoon jotta loput koodista pystytään suorittamaan
-            Console.WriteLine("Olet kerroksessa: " + Taajuus.ToString());
         }
 
         public void TulostaData()

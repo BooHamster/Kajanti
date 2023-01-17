@@ -4,18 +4,18 @@ using System.Text;
 
 namespace Harjoitus8
 {
-    class Pomo : Henkilö
+    class Pomo : Henkilö //Pomo olio
     {
-        private static int instanssit = 0;
+        private static int instanssit = 0; //Pomo olioiden lukumäärän laskemiseen staattinen muuttuja
 
-        public static void KuinkaMonta()
+        public static void KuinkaMonta() //Metodi joka tulostaa pomo olioiden määrän konsoliin
         {
             Console.WriteLine("Pomoja Luotu " + instanssit);
             Console.WriteLine();
         }
 
-
-        public override string Nimi { get; set; }
+        //Pomo olion muuttujat
+        public override string Nimi { get; set; } 
         public override string Osoite { get; set; }
         public string TyöPaikka { get; set; }
         public int Palkkaluokka { get; set; }
@@ -26,18 +26,18 @@ namespace Harjoitus8
 
         public int bonus;
 
-        public Pomo(string _nimi, string _osoite, string _työ, decimal _tunnit, int _luokka)
+        public Pomo(string _nimi, string _osoite, string _työ, decimal _tunnit, int _luokka) //Pomo olion konstruktorin muuttujat
         {
             Nimi = _nimi;
             Osoite = _osoite;
             TyöPaikka = _työ;
             Tunnit = _tunnit;
             Palkkaluokka = _luokka;
-            if (Pomo.instanssit > 0)
+            if (Pomo.instanssit > 0) //Jos pomoja yrittää luoda useamman, se ei onnistu koska tämä if lause katsoo pomo olioiden määrää
             {
                 Console.WriteLine("Yritit ylentää jonkun pomoksi, mutta pomoja saa olla vain yksi!");
             }
-            else
+            else //Jos pomoja olioita ei ole vielä luotu, niin silloin tämä else lauseen koodi suoritetään ja lisätään pomojen määrää yhdellä
             {
                 Console.WriteLine("Pomo lisätään");
                 instanssit++;
@@ -46,16 +46,17 @@ namespace Harjoitus8
     
 
 
-        public void PalkkaTaulukko(int i)
+        public void PalkkaTaulukko(int i) //Koodin sisältä voi muuttaa tähän pomo olion saamaa palkkaa
         {
-            int randomluku;
-            Random arpa = new Random();
-            randomluku = arpa.Next(1, 10);
-            Console.WriteLine("Pomon tiedot: ");
+            int randomluku; //Luodaan kokonaisluku muuttuja
+            Random arpa = new Random(); //Luodaan randomi tyyppinen muuttuja
+            randomluku = arpa.Next(1, 10); //Luodaan uusi muuttuja joka tallentaa randomi muuttuja arpa muuttujan arvon, joka arvotaan 1 ja 10 väliltä
+            Console.WriteLine("Pomon tiedot: ");  //Pomon tiedot tulostuu tähän
             Console.WriteLine("-- Nimi:  " + Nimi);
             Console.WriteLine("-- Osoite:  " + Osoite);
             Console.WriteLine("-- Työpaikka:  " + TyöPaikka);
             Console.WriteLine("-- Työtunnit kuukaudessa:  " + Tunnit);
+            //Käydään if lauseilla läpi mikä pomon palkaksi tulee randomisaatiolla
             if (randomluku == 1)
             {
                 bonus = i * randomluku;
@@ -115,7 +116,7 @@ namespace Harjoitus8
                 bonus = i * randomluku;
                 Console.WriteLine("Pomon osallistui {0} yhtiökokoukseen kuussa ja sai bonusta " + bonus + " euroa", randomluku);
             }
-
+            //Pomon palkkaluokka sen mukaan mitä pomo oliolle määrättiin sen konstruktorin muuttujalle sitä luodessa
             if (Palkkaluokka == 1)
             {
                 decimal conversion = 50.00M;
@@ -199,7 +200,7 @@ namespace Harjoitus8
 
             Console.WriteLine();
         }
-        public void PomonBonus(int i)
+        public void PomonBonus(int i) //Metodi pomon bonuksen randomisointiin
         {
             int randomluku;
             Random arpa = new Random();
@@ -265,7 +266,7 @@ namespace Harjoitus8
                 Console.WriteLine("Pomon osallistui {0} yhtiökokoukseen kuussa ja sai bonusta " + bonus + " euroa", randomluku);
             }
         }
-        public void TulostaData()
+        public void TulostaData() //Metodi pomon kaikkien tietojen tulostukseen
         {
             Console.WriteLine("Pomon tiedot: ");
             Console.WriteLine("-- Nimi:  " + Nimi);

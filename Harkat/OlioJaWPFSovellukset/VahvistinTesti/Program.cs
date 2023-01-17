@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace VahvistinTesti
 {
     class Program

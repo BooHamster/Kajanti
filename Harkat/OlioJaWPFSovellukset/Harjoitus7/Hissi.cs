@@ -4,20 +4,20 @@ using System.Text;
 
 namespace Harjoitus7
 {
-    class Hissi
+    class Hissi //Hissi luokka
     {
-        private readonly int MaxKerros = 6;
+        private readonly int MaxKerros = 6; //privaatti muuttuja johon ei pääse käsiksi kuin luokan sisältä, ja vain luku ominaisuudella, joten sitä ei voi muuttaa koodista muualta
         private int kerros { get; set; }
         public int Kerros
         {
-            get { return kerros; }
-            set 
+            get { return kerros; } //Palauttaa set lauseen sisältämän kerros muuttujan arvon tähän
+            set  //Ottaa kerros muuttujan ja asettaa sen uudestaan jos if lauseen sisältämät ehdot toteutuvat
             {
-                if (value> MaxKerros)
+                if (value> MaxKerros) // Jos käyttäjän antama arvo kerrokselle ylittää maksimi kerroksen, niin se asetetaan maksimi kerros muuttujan arvoon
                 {
                     value = MaxKerros;
                 }
-                kerros = value;
+                kerros = value; //Jos maksimi kerrosta ei ylitetä, niin silloin kerros arvo ei muutu
             }
         }
         public void AsetaKerros()

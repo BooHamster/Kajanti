@@ -6,7 +6,7 @@ namespace Harjoitus6
 {
     class Eläin //Eläin yliluokka
     {
-        private static int instanssit = 0;
+        private static int instanssit = 0; //staattinen muttuja jota voidaan kutsua itse luokalla, luomatta luokan oliota
 
         public Eläin()
         {

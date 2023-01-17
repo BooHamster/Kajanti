@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace HenkilöStatic
 {
     class Program

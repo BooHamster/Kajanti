@@ -1,22 +1,22 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace Harjoitus6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Eläin.KuinkaMonta();
-            Monkey.KuinkaMonta();
+            Eläin.KuinkaMonta(); //Metodi tulostaa kaikki Eläin luokkaa käyttävien olioiden määrän
+            Monkey.KuinkaMonta(); //Metodi tulostaa kaikki luokkaa käyttävien olioiden määrän
+            Dog.KuinkaMonta(); //Metodi tulostaa kaikki koira luokkaa käyttävien olioiden määrän
+
+            Eläin eläin = new Eläin(); //Luo eläin luokkaa käyttävän olion
             Dog.KuinkaMonta();
 
-            Eläin eläin = new Eläin();
-            Dog.KuinkaMonta();
+            eläin.Ääntele(); //Käyttää Ääntele metodia eläin oliolla
 
-            eläin.Ääntele();
-
-            Dog dog = new Dog();
-            dog.Ääntele();
+            Dog dog = new Dog(); //Luo koira olion
+            dog.Ääntele(); //Käyttää ylikirjoitettua ääntele metodia koira oliolla
 
             Dog Dog2= new Dog();
 

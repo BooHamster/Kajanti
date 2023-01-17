@@ -6,14 +6,14 @@ namespace Harjoitus6
 {
     class Dog : Eläin //Koira aliluokka, perii Eläin yliluokan : Eläin toiminnolla
     {
-        private static int instanssit = 0;
+        private static int instanssit = 0; //staattinen muttuja jota voidaan kutsua itse luokalla, luomatta luokan oliota
 
         public Dog()
         {
-            instanssit++;
+            instanssit++; //tätä muuttujaa lisätään aina yhdellä kun luokan olio luodaan
         }
 
-        public static new void KuinkaMonta()
+        public static new void KuinkaMonta() //Metodi joka tuo konsoliin Dog luokan olioiden määrän
         {
             Console.WriteLine("Dogeja luotu " + instanssit);
         }

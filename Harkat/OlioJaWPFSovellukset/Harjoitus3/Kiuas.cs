@@ -8,9 +8,9 @@ using Microsoft.Azure.Amqp.Framing;
 
 namespace Harjoitus3
 {
-    class Kiuas
+    class Kiuas  // Kiuas luokka
     {
-        private string Nimi { get; set; }
+        private string Nimi { get; set; } //Kiuas luokan muuttujat
         private bool Päällä{ get; set; }
         private int Lämpötila { get; set; }
 
@@ -27,7 +27,7 @@ namespace Harjoitus3
             Kosteus = _kos;
         }
 
-        public void TulostaData()
+        public void TulostaData() //Metodi kiuas olion tietojen tulostukseen
         {
             Console.WriteLine("Kiuas: ");
             Console.WriteLine("-- Nimi:  " + Nimi);
@@ -49,7 +49,7 @@ namespace Harjoitus3
         }
 
 
-        public void LisääLämpöä(int i)
+        public void LisääLämpöä(int i) //Lämpötilan säätelyyn metodi
         {
             Lämpötila = Lämpötila + i;
             if (Lämpötila < 0)
@@ -58,7 +58,7 @@ namespace Harjoitus3
             }
             else if (Lämpötila > 99 && Lämpötila <120)
             {
-                Console.BackgroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Black;  // Lämpötilan mukaan vaihtuu konsolin värit
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("Alkaapi kuumottaa hieman");
             }
@@ -96,7 +96,7 @@ namespace Harjoitus3
             }
         }
 
-        public void LaskeLämpöä(int i)
+        public void LaskeLämpöä(int i) //Lämpötilan laskuun metodi
         {
             Lämpötila = Lämpötila - i;
             if (Lämpötila < 0)
@@ -105,7 +105,7 @@ namespace Harjoitus3
             }
         }
 
-        public void HeitäLöylyä(int i)
+        public void HeitäLöylyä(int i) //Löylyn heittämiseen metodi
         {
             if (Päällä == true)
             {
@@ -155,7 +155,7 @@ namespace Harjoitus3
             }
         }
 
-        public void ONJAOFF()
+        public void ONJAOFF() //Kiukaan päälle ja pois päältä laittamiseen metodi
         {
             if (Päällä != true)
             {

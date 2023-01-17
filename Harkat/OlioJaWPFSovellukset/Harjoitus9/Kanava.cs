@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Harjoitus9
 {
-    class Kanava
+    class Kanava //Kanava olio
     {
-        public string Nimi { get; set; }
+        public string Nimi { get; set; } //Kanava olion muuttujat
         public string Kesto { get; set; }
 
         private decimal taajuus { get; set; }
@@ -14,7 +14,7 @@ namespace Harjoitus9
         private readonly decimal MaxTaajuus = 107.9M;
         private readonly decimal MinTaajuus = 88.0M;
 
-        public decimal Taajuus
+        public decimal Taajuus //Taajuus muuttujalle get ja set arvot, koska taajuudelle tarvitaan minimi ja maksimi arvot, ja tällä tavoin saadaan ne asetettua
         {
             get { return taajuus; }
             set
@@ -30,13 +30,13 @@ namespace Harjoitus9
                 taajuus = value;
             }
         }
-        public Kanava(string _nimi, decimal _tajuus)
+        public Kanava(string _nimi, decimal _tajuus) //Konstruktori kanava oliolle
         {
             Nimi = _nimi;
             taajuus = _tajuus;
         }
 
-        public void TulostaKanava()
+        public void TulostaKanava() //Kanavan tietojen tulostamiseen metodi
         {
             Console.WriteLine();
             Console.WriteLine("--- Radio Kanava:  " + Nimi);
@@ -44,7 +44,7 @@ namespace Harjoitus9
         }
 
 
-        public void TulostaPopKanava()
+        public void TulostaPopKanava() //Metodi tietyn kanavan kappaleiden tulostamiseen randomisaatiolla
         {
             int randomluku;
             Random arpa = new Random();
@@ -101,7 +101,7 @@ namespace Harjoitus9
             }
         }
 
-        public void TulostaRockKanava()
+        public void TulostaRockKanava() //Metodi tietyn kanavan kappaleiden tulostamiseen randomisaatiolla
         {
             int randomluku;
             Random arpa = new Random();
@@ -157,12 +157,5 @@ namespace Harjoitus9
                 Console.WriteLine("Hold the Line - Artisti - Toto - Kesto - 5:40");
             }
         }
-        public string ToString()
-        {
-            string merkkijono = ("----Nimi:  " + Nimi);
-
-            return merkkijono;
-        }
-
     }
 }

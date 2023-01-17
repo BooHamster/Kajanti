@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace Harjoitus12
 {
     class Program
@@ -18,7 +18,7 @@ namespace Harjoitus12
 
                 if (lukija.Equals("näytä")) Pakka.TulostaPakka(); //Jos käyttäjä antaa näytä komennon, niin Pakka luokka toteuttaa TulostaPakka metodin, mikä tulostaa Kokoelman tiedot
 
-                else if (lukija.Equals("lisää")) Pakka.LisääKortit(); //Jos käyttäjä antaa lisää komennon, niin Lisää metodi käydään käpi, mikä on Kortit olioiden lisäämiseen Kokoelmaan tarkoitettu
+                else if (lukija.Equals("lisää")) Pakka.LisääKortit2(); //Jos käyttäjä antaa lisää komennon, niin Lisää metodi käydään käpi, mikä on Kortit olioiden lisäämiseen Kokoelmaan tarkoitettu
                 else if (lukija.Equals("sekoita")) Pakka.Sekoita(); //Jos käyttäjä antaa Sekoita komennon, niin Pakka luokka käy Sekoita Metodin läpi, mikä sekoittaa Kortti Kokoelman Kortit, ja tulostaa sekoitetun Kokoelman järjestyksen käyttäjälle
                 else if (lukija.Equals("poistu")) //Jos käyttäjä antaa poistu komennon, niin käydään läpi tämän else if lauseen sisältö ohjelmasta poistumiseen
                 {

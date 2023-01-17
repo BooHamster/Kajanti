@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Harjoitus8
 {
-    class Työntekijä : Henkilö
+    class Työntekijä : Henkilö // Työntekijä luokka
     {
 
-        private static int instanssit = 0;
+        private static int instanssit = 0; //Työntekijä luokan muuttujat
 
         public override string Nimi { get; set; }
         public override string Osoite { get; set; }
@@ -16,7 +16,7 @@ namespace Harjoitus8
         public decimal Tunnit { get; set; }
         public decimal Palkka { get; set; }
 
-        public Työntekijä(string _nimi, string _osoite, string _työ, decimal _tunnit, int _luokka)
+        public Työntekijä(string _nimi, string _osoite, string _työ, decimal _tunnit, int _luokka) //Työntekijä olion konstruktorin muuttujat
         {
             Console.WriteLine("Työntekijä lisätään");
             Console.WriteLine();
@@ -28,13 +28,13 @@ namespace Harjoitus8
             instanssit++;
         }
 
-        public static void KuinkaMonta()
+        public static void KuinkaMonta() //Metodi työntekijä olioiden laskemiseen
         {
             Console.WriteLine("Työntekijöitä luotu " + instanssit);
             Console.WriteLine();
         }
 
-        public void PalkkaTaulukko()
+        public void PalkkaTaulukko() 
         {
             Console.WriteLine("Työntekijän tiedot: ");
             Console.WriteLine("-- Nimi:  " + Nimi);

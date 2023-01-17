@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace AbstractiTesti
 {
     class Program

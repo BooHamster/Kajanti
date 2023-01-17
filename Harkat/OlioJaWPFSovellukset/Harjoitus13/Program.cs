@@ -1,85 +1,155 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace Harjoitus13
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string lukija = ""; //Luodaan string tyyppinen muuttuja
+            Joukkueet.LisääJoukkueet(); //Staattinen metodi joka lisää joukkueet listaan Joukkuuet luokan sisällä
+            string lukija = "";
 
-            while (true) //While looppi käyttäjän kirjoittamia komentoja varten
+            while (true) //
             {
                 Console.WriteLine();
                 Console.WriteLine("Tämä on SM-Liigan tietokanta, voit lisätä/poistaa Joukkueita SM-Liigasta, lisätä/poistaa Pelaajia Joukkueista, näyttää Joukkueet SM-Liigassa, näyttää Pelaajat Joukkueissa ");
                 Console.WriteLine();
                 Console.WriteLine("Anna komento (Näytä, Lisää, Poista tai Poistu) : ");
-                lukija = Console.ReadLine().ToLower(); //Määritetään lukija muuttuja Console.ReadLineksi, jolla käyttäjä antaa komennot, ja samalla muuntaa kaikki käyttäjän kirjoittaman pieniksi kirjaimiksi, jolloin sillä ei ole väliä kirjoittaako pieniä vai isoja kirjaimia
+                lukija = Console.ReadLine().ToLower();
 
-                if (lukija.Equals("näytä")) Joukkueet.TulostaSMLiiga(); //Jos käyttäjä antaa näytä komennon, niin Kokoelma toteuttaa TulostaKokoelma metodin, mikä tulostaa Kokoelman tiedot
+                if (lukija.Equals("näytä")) NäytäJoukkueet();
 
-                else if (lukija.Equals("lisää")) Lisää(); //Jos käyttäjä antaa lisää komennon niin Lisää metodi käydään käpi, mikä on Opiskelia olioiden lisäämiseen Kokoelmaan tarkoitettu
-                else if (lukija.Equals("poista")) Poista(); //Jos käyttäjä antaa poista komennon, niin käydään Poista metodi läpi, mikä on Opiskelia olioiden poistamiseen Kokoelmasta tarkoitettu metodi
-                else if (lukija.Equals("poistu")) //Jos käyttäjä antaa poistu komennon, niin käydään läpi tämän else if lauseen sisältö ohjelmasta poistumiseen
+                else if (lukija.Equals("lisää")) Lisää();
+                else if (lukija.Equals("poista")) Poista();
+                else if (lukija.Equals("poistu"))
                 {
                     Console.WriteLine("Poistutaan sovelluksesta");
-                    break; // Tämä lopettaa while loopin ja tässä tapauksessa koko ohjelman, voi käyttää myös return; komentoa loopista poistumiseen
+                    break;
                 }
-                else //Jos mitään komentoa ei annettu, mutta jotain kirjoitettiin, niin silloin tämä else lauseen sisältö käydään läpi
+                else
                 {
                     Console.WriteLine("Virheellinen syöttö, yritä uudelleen");
                 }
             }
         }
 
-        static void Lisää() //Metodi Opiskelia olioiden lisäämiseen Opiskelijat Kokoelmaan
+        static void NäytäJoukkueet()
         {
-
-
-            Console.WriteLine();
-            Console.WriteLine("-------");
-            Console.WriteLine("Anna uuden Joukkueen tiedot: ");
-            Console.WriteLine();
-            Joukkueet.LisääJoukkue(); //Tämä toteuttaa LisääOpiskelija metodin Kokoelma luokalle, missä lisätään Opiskelija Kokoelma luokan sisällä luotuun Opiskelijat Kokoelma olioon
-        }
-
-        static void Poista() //Metodi Opiskelijat olioiden poistamiseen Opiskelijat Kokoelmasta
-        {
-            if (Joukkueet.SMLiiga.Count == 0) //Jos Opiskelijat Kokoelma on tyhjä, niin silloin toteutetaan tämän if lauseen sisältö
+            Joukkueet.TulostaSMLiiga();
+            int joukkuemäärä = Joukkueet.SMLiiga.Count;
+            if (Joukkueet.SMLiiga.Count > 0)
             {
-                Console.WriteLine("´SM-Liigassa ei ole yhtään Joukkuetta!");
-                return; //Tällä komennolla poistutaan Poista metodista ja palataan Main metodiin
-            }
-
-            Joukkueet.TulostaSMLiiga(); //Metodi Opiskelijat Kokoelman sisällön tulostamiseen käyttäjälle
-
-            int lukijaIndex; //Luodaan int muuttuja
-            int joukkuemäärä = Joukkueet.SMLiiga.Count; //Luodaaan ja määritetään int muuttuja, ja sen määritys on Opiskelijat Kokoelmassa olevien olioiden määrä
-
-            while (true) //Tämä while looppi sitä varten, että pysytään tässä Metodissa niin kauan kunnes käyttäjä poistaa Opiskelija olion Opiskelijat Kokoelmasta
-            {
-                Console.WriteLine();
-                Console.WriteLine("Minkä Joukkueen haluat poistaa SM-Liigasta? Valitse väliltä {0} - {1} : ", 1, joukkuemäärä); //Tulostaa Opiskelija oliot Opiskelijat Kokoelmasta 1 - niin monta oliota kuin Kokoelmassa on
-                bool result = int.TryParse(Console.ReadLine(), out lukijaIndex); // Luodaan bool muuttuja, ja määritetään se Console.ReadLineksi, mutta int.TryParse komennolla tarkistetaan, että käyttäjän antama syöte on vain numero(oita), ja annettu arvo määrätään lukijaIndex muuttujalle
-
-                if (result) //Jos result boolean on true, elikkä annettu arvo oli numeraalinen, niin tämän if lauseen sisältö suoritetaan
+                while (true)
                 {
-                    if (lukijaIndex <= joukkuemäärä && lukijaIndex > 0) //Jos käyttäjän antama arvo on pienempi tai yhtä suuri kuin Opiskelija olioiden määrä Opiskelijat Kokoelmassa JA annettu arvo on pienempi kuin 0, silloin tämä if lauseen sisältö suoritaan
+                    Console.WriteLine();
+                    Console.WriteLine("Minkä Joukkueen Pelaajaat haluat nähdä? {0} - {1} : ", 1, joukkuemäärä);
+                    string JoukkueenValinta = Console.ReadLine().ToUpper();
+                    if (JoukkueenValinta.Equals("1") || JoukkueenValinta.Equals("JOKERIT"))
                     {
-                        Joukkueet.PoistaJoukkue(lukijaIndex - 1); //Suoritetaan Kokoelma luokan sisältä PoistaOpiskelija metodi, mikä poistaa annettua arvoa vastaavan Opiskelija Olion Opiskelijat Kokoelmasta
-                        break;  //Tällä poistutaan tästä TulostaKokoelma Metodista
+                        Joukkueet.Jokerit.TulostaJoukkue();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("2") || JoukkueenValinta.Equals("TPS"))
+                    {
+                        Joukkueet.TPS.TulostaJoukkue();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("3") || JoukkueenValinta.Equals("KÄRPÄT"))
+                    {
+                        Joukkueet.Kärpät.TulostaJoukkue();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("4") || JoukkueenValinta.Equals("TAPPARA"))
+                    {
+                        Joukkueet.Tappara.TulostaJoukkue();
+                        break;
                     }
                     else
                     {
-                        Console.WriteLine("Virheellinen valinta, anna uusi valinta"); //Käyttäjä antoi numeron mikä ei vastannut mitään Opiskelijaa
+                        Console.WriteLine("Virheellinen valinta, anna uusi valinta");
                     }
                 }
-                else
+            }
+        }
+        static void Lisää() //Metodi pelaajien lisäämiseen joukkueisiin
+        {
+            {
+                Joukkueet.TulostaSMLiiga(); //Tulostetaan joukkueet konsoliin tällä metodilla
+                while (true)
                 {
-                    Console.WriteLine("Virheellinen syöttö. Syötöksi kelpaa vain numerot!"); //Käyttäjä antoi jonkun muun kuin numeron konsoliin
+                    Console.WriteLine();
+                    Console.WriteLine("Mihin Joukkueeseen haluat Lisätä Pelaajan?");
+                    string JoukkueenValinta = Console.ReadLine().ToUpper();
+                    if (JoukkueenValinta.Equals("1") || JoukkueenValinta.Equals("JOKERIT"))
+                    {
+                        Joukkueet.Jokerit.LisääPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("2") || JoukkueenValinta.Equals("TPS"))
+                    {
+                        Joukkueet.TPS.LisääPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("3") || JoukkueenValinta.Equals("KÄRPÄT"))
+                    {
+                        Joukkueet.Kärpät.LisääPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("4") || JoukkueenValinta.Equals("TAPPARA"))
+                    {
+                        Joukkueet.Tappara.LisääPelaaja();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Virheellinen valinta, anna uusi valinta");
+                    }
                 }
             }
         }
 
+        static void Poista() //Metodi pelaajien poistamiseen joukkueista
+        {
+            {
+                int joukkuemäärä = Joukkueet.SMLiiga.Count;
+                Joukkueet.TulostaSMLiiga();
+                while (true)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Mistä Joukkueesta haluat poistaa Pelaajan?");
+                    string JoukkueenValinta = Console.ReadLine().ToUpper();
+                    if (JoukkueenValinta.Equals("1") || JoukkueenValinta.Equals("JOKERIT"))
+                    {
+                        Joukkueet.Jokerit.TulostaJoukkue();
+                        Joukkueet.Jokerit.PoistaPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("2") || JoukkueenValinta.Equals("TPS"))
+                    {
+                        Joukkueet.TPS.TulostaJoukkue();
+                        Joukkueet.TPS.PoistaPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("3") || JoukkueenValinta.Equals("KÄRPÄT"))
+                    {
+                        Joukkueet.Kärpät.TulostaJoukkue();
+                        Joukkueet.Kärpät.PoistaPelaaja();
+                        break;
+                    }
+                    else if (JoukkueenValinta.Equals("4") || JoukkueenValinta.Equals("TAPPARA"))
+                    {
+                        Joukkueet.Tappara.TulostaJoukkue();
+                        Joukkueet.Tappara.PoistaPelaaja();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Virheellinen valinta, anna uusi valinta");
+                    }
+                }
+            }
+        }
     }
 }
+
+

@@ -1,5 +1,5 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace Harjoitus1
 {
     class Program

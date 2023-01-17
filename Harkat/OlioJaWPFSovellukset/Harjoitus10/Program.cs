@@ -1,18 +1,18 @@
 ﻿using System;
-
+//Robert Kajanti
 namespace Harjoitus10
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Varis Varis1 = new Varis("Varis", 90);
+            Varis Varis1 = new Varis("Varis", 90); //Luodaan varis olio
 
-            Varis1.MakeASound();
-            Varis1.Fly();
+            Varis1.MakeASound(); //Käytetään metodio varis oliolle "äänen"  tuottamiseen
+            Varis1.Fly(); //Käytetään metodia varis oliolle "lentämiseen"
 
 
-            Kala Kala1 = new Kala("Ahven", "Blup Blup", 50);
+            Kala Kala1 = new Kala("Ahven", "Blup Blup", 50); //Luodaan kala olio
 
             Kala1.MakeASound();
             Kala1.Swim();
